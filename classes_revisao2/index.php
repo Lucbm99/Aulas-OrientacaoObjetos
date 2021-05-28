@@ -3,45 +3,54 @@
 class Animais {
     public $nome;
     public $classe;
-    public $patas;
+    public $patas = 0;
 
-    public function __construct($nome, $classe, $patas) {
-        $this->nome = $nome;
-        $this->classe = $classe;
-        $this->patas = $patas;
-    }
 
-    public function getNomeAnimal($nameAnimal) {
-        $this->nome = $nameAnimal;
+    public function aumentarPatas() {
+        $this->patas++;
     }
+    // public function __construct($nome, $classe, $patas) {
+    //     $this->nome = $nome;
+    //     $this->classe = $classe;
+    //     $this->patas = $patas;
+    // }
 
-    public function setNomeAnimal() {
-        return $this->nome;
-    }
+    // public function getNomeAnimal($nameAnimal) {
+    //     $this->nome = $nameAnimal;
+    // }
 
-    public function getClasseAnimal($classAnimal) {
-        $this->classe = $classAnimal;
-    }
+    // public function setNomeAnimal() {
+    //     return $this->nome;
+    // }
 
-    public function setClasseAnimal() {
-        return $this->classe;
-    }
+    // public function getClasseAnimal($classAnimal) {
+    //     $this->classe = $classAnimal;
+    // }
 
-    public function setQuantidadePatas($patasAnimal) {
-        $this->patas = $patasAnimal;
-    }
+    // public function setClasseAnimal() {
+    //     return $this->classe;
+    // }
 
-    public function getQuantidadePatas() {
-        return $this->patas;
-    }
+    // public function setQuantidadePatas($patasAnimal) {
+    //     $this->patas = $patasAnimal;
+    // }
+
+    // public function getQuantidadePatas() {
+    //     return $this->patas;
+    // }
 
     
 }
 
-$animais1 = new Animais("Rinoceronte", "Mamífero", 4);
-$animais2 = new Animais("Jacaré", "Reptil", 4);
-$animais3 = new Animais("Aranha", "Inseto - aracnídeo", 8);
+$animais1 = new Animais();
+$animais1->nome = "Elefante";
+$animais1->classe = "Mamifero";
+$animais1->aumentarPatas();
 
-echo "Animal 1 - Nome: ".$animais1->nome."<br>"."Classe: ".$animais1->classe."<br>"."Quantidade de patas: ".$animais1->patas."<br>";
-echo "Animal 2 - Nome: ".$animais2->nome."<br>"."Classe: ".$animais2->classe."<br>"."Quantidade de patas: ".$animais2->patas."<br>";
-echo "Animal 3 - Nome: ".$animais3->nome."<br>"."Classe: ".$animais3->classe."<br>"."Quantidade de patas: ".$animais3->patas."<br>";
+
+$animais2 = new Animais();
+$animais2->nome = "Rinoceronte";
+$animais2->classe = "Mamifero";
+
+echo "Animal 1: ".$animais1->nome." e sua classe é: ".$animais1->classe." - Quantidade de patas: ".$animais1->patas."<br>";
+echo "Animal 2: ".$animais2->nome." e sua classe é: ".$animais2->classe."<br>";
